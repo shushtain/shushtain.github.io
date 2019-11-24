@@ -15,11 +15,6 @@ section {
     font-weight: bold;
 }
 
-h1 {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-}
-
 h2 {
     margin-bottom: 4rem;
 }
@@ -60,6 +55,10 @@ MEDIA 600
         grid-column-end: span 1;
     }
 
+    h1 {
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
 
 }
 
