@@ -1,0 +1,76 @@
+figure {
+    margin-bottom: 2rem;
+}
+
+figcaption {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-size: .8em;
+    line-height: 1.4;
+    width: 80%;
+    color: hsl(0, 0%, 90%);
+}
+
+.grid {
+    justify-items: center;
+}
+
+.grid * {
+    margin-bottom: 0;
+}
+
+.grid > * {
+    grid-column-end: span 2;
+}
+
+figure + p,
+p + figure,
+p + .grid,
+.grid + p,
+.grid + ul,
+ul + .grid,
+ul + figure,
+figure + ul {
+    margin-top: 2.5rem;
+}
+
+/*
+===========================
+MEDIA 600
+===========================
+*/
+
+@media screen and (min-width:600px) {
+    .split {
+        grid-column: span 1;
+    }
+}
+
+/*
+===========================
+MEDIA 800
+===========================
+*/
+
+@media screen and (min-width:800px) {
+
+    figure + p,
+    p + figure,
+    p + .grid,
+    .grid + p,
+    .grid + ul,
+    ul + .grid,
+    ul + figure,
+    figure + ul {
+        margin-top: 3rem;
+    }
+
+    .grid > * {
+        grid-column-end: span 4;
+    }
+
+    .split {
+        grid-column: span 2;
+    }
+}
