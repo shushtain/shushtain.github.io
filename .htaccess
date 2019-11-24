@@ -1,4 +1,4 @@
-DirectoryIndex /portfolio.html
+DirectoryIndex /index.html
 ErrorDocument 404 /404.html
 
 RewriteEngine On
@@ -15,7 +15,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)/$ /$1 [L,R=301]
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-RedirectMatch 301 /portfolio/$ https://luxoriant.com/portfolio
+RedirectMatch 301 /portfolio/$ https://luxoriant.com/
 
 
 <IfModule mod_expires.c>

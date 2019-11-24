@@ -15,6 +15,11 @@ section {
     font-weight: bold;
 }
 
+h1 {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
 h2 {
     margin-bottom: 4rem;
 }
@@ -54,6 +59,8 @@ MEDIA 600
     #services .grid > div {
         grid-column-end: span 1;
     }
+
+
 }
 
 /*
@@ -84,6 +91,7 @@ MEDIA 800
     #services .grid > div {
         grid-column-end: span 2;
     }
+
 
     #offer h2 {
         margin-top: 15rem;
