@@ -96,7 +96,7 @@ MEDIA 800
         margin-bottom: 15rem;
     }
 
-    #works .grid .selected:nth-child(even) > div:last-child {
+    #works .grid .selected:nth-child(odd) > div:last-child {
         order: -1;
         text-align: right;
     }
