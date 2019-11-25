@@ -39,6 +39,8 @@ img {
     display: block;
     vertical-align: bottom;
     user-select: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem hsl(0, 0%, 2%);
 }
 
 h1,
@@ -132,6 +134,18 @@ MEDIA 800
     body {
         padding: 0 4rem;
         font-size: 1.8rem;
+    }
+
+    header,
+    footer,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    li {
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     h3,
