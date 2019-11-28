@@ -39,8 +39,8 @@ img {
     display: block;
     vertical-align: bottom;
     user-select: none;
-    /*    border-radius: 1rem;*/
-    /*    box-shadow: 0 0 1rem hsl(0, 0%, 2%);*/
+    /*        border-radius:.25rem;*/
+    box-shadow: 0 0 1rem hsl(0, 0%, 2%);
 }
 
 h1,
