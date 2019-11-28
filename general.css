@@ -39,8 +39,8 @@ img {
     display: block;
     vertical-align: bottom;
     user-select: none;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem hsl(0, 0%, 2%);
+    /*    border-radius: 1rem;*/
+    /*    box-shadow: 0 0 1rem hsl(0, 0%, 2%);*/
 }
 
 h1,
@@ -68,6 +68,7 @@ ul {
 h1 {
     font-size: 2.2em;
     line-height: 1.4;
+    margin-bottom: 3rem;
 }
 
 h2 {
@@ -89,7 +90,6 @@ ul {
 li {
     padding-left: .5rem;
 }
-
 
 header,
 footer {
@@ -136,18 +136,6 @@ MEDIA 800
         font-size: 1.8rem;
     }
 
-    header,
-    footer,
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    li {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
     h3,
     h4,
     p,
@@ -158,7 +146,6 @@ MEDIA 800
     .grid {
         grid-template-columns: repeat(4, 1fr);
     }
-
 
 }
 

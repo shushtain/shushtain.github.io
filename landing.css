@@ -2,19 +2,6 @@ section {
     margin-top: 8rem;
 }
 
-.selected > div {
-    grid-column-end: span 2;
-}
-
-.selected > div:last-child p {
-    margin-bottom: .5rem;
-}
-
-#feedback p:first-line,
-#works p:first-line {
-    font-weight: bold;
-}
-
 h2 {
     margin-bottom: 4rem;
 }
@@ -35,12 +22,14 @@ h2 {
     grid-column-end: span 2;
 }
 
-#works .grid .selected > div {
-    grid-column-end: span 2;
-}
-
-.selected > div:last-child {
+figcaption {
     display: none;
+    margin-top: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: hsl(0, 0%, 95%);
+    background-color: none;
+
 }
 
 /*
@@ -70,7 +59,7 @@ MEDIA 800
 @media screen and (min-width:800px) {
 
     #works .grid .selected {
-        grid-column-end: span 4;
+        grid-column-end: span 2;
         align-items: center;
     }
 
