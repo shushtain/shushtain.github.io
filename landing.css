@@ -6,10 +6,7 @@ h2 {
     margin-bottom: 4rem;
 }
 
-#works .grid div {
-    margin-bottom: 0;
-}
-
+/*
 .grid > div {
     grid-column-end: span 2;
 }
@@ -21,6 +18,7 @@ h2 {
 #works .grid .selected {
     grid-column-end: span 2;
 }
+*/
 
 figcaption {
     display: none;
@@ -32,6 +30,24 @@ figcaption {
 
 }
 
+
+/*
+===========================
+MEDIA 300
+===========================
+*/
+
+@media screen and (min-width:300px) {
+
+    .c4 div:nth-child(odd) a img:hover {
+        transform: scale(1.02) rotateZ(-1deg);
+    }
+
+    .c4 div:nth-child(even) a img:hover {
+        transform: scale(1.02) rotateZ(1deg);
+    }
+}
+
 /*
 ===========================
 MEDIA 600
@@ -39,13 +55,22 @@ MEDIA 600
 */
 
 @media screen and (min-width:600px) {
-    #services .grid > div {
-        grid-column-end: span 1;
-    }
 
     h1 {
         margin-top: 10rem;
         margin-bottom: 10rem;
+    }
+
+    .c4 div:nth-child(3n) a img:hover {
+        transform: scale(1.02) rotateZ(1deg);
+    }
+
+    .c4 div:nth-child(3n+1) a img:hover {
+        transform: scale(1.02) rotateZ(-1deg);
+    }
+
+    .c4 div:nth-child(3n+2) a img:hover {
+        transform: scale(1.02) rotateZ(0deg);
     }
 
 }
@@ -58,49 +83,34 @@ MEDIA 800
 
 @media screen and (min-width:800px) {
 
-    #works .grid .selected {
-        grid-column-end: span 2;
-        align-items: center;
-    }
-
-    #works .grid .selected > div {
-        grid-column-end: span 2;
-    }
-
-    .selected > div {
-        grid-column-end: span 1;
-    }
-
-    .selected > div:last-child {
-        display: block;
-    }
-
-    #services .grid > div {
-        grid-column-end: span 2;
-    }
-
-
     #offer h2 {
         margin-top: 15rem;
         margin-bottom: 15rem;
-    }
-
-    #works .grid .selected:nth-child(odd) > div:last-child {
-        order: -1;
-        text-align: right;
     }
 
 }
 
 /*
 ===========================
-MEDIA 1000
+MEDIA 900
 ===========================
 */
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:900px) {
 
-    #services .grid > div {
-        grid-column-end: span 1;
+    .c4 div:nth-child(4n) a img:hover {
+        transform: scale(1.02) rotateZ(1deg);
+    }
+
+    .c4 div:nth-child(4n+1) a img:hover {
+        transform: scale(1.02) rotateZ(-1deg);
+    }
+
+    .c4 div:nth-child(4n+2) a img:hover {
+        transform: scale(1.02) rotateZ(0deg);
+    }
+
+    .c4 div:nth-child(4n-1) a img:hover {
+        transform: scale(1.02) rotateZ(0deg);
     }
 }
