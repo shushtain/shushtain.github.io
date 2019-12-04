@@ -6,20 +6,6 @@ h2 {
     margin-bottom: 4rem;
 }
 
-/*
-.grid > div {
-    grid-column-end: span 2;
-}
-
-#works .grid > div {
-    grid-column-end: span 1;
-}
-
-#works .grid .selected {
-    grid-column-end: span 2;
-}
-*/
-
 figcaption {
     display: none;
     margin-top: 1rem;
@@ -30,6 +16,18 @@ figcaption {
 
 }
 
+.c4.lazy > * {
+    grid-column-end: span 12;
+}
+
+footer {
+    margin: 15rem 0 20rem 0;
+}
+
+p,
+ul {
+    margin-bottom: 0;
+}
 
 /*
 ===========================
@@ -46,6 +44,7 @@ MEDIA 300
     .c4 div:nth-child(even) a img:hover {
         transform: scale(1.02) rotateZ(1deg);
     }
+
 }
 
 /*
@@ -73,6 +72,10 @@ MEDIA 600
         transform: scale(1.02) rotateZ(0deg);
     }
 
+    .c4.lazy > * {
+        grid-column-end: span 6;
+    }
+
 }
 
 /*
@@ -83,9 +86,8 @@ MEDIA 800
 
 @media screen and (min-width:800px) {
 
-    #offer h2 {
-        margin-top: 15rem;
-        margin-bottom: 15rem;
+    .c4.lazy > * {
+        grid-column-end: span 4;
     }
 
 }
@@ -112,5 +114,18 @@ MEDIA 900
 
     .c4 div:nth-child(4n-1) a img:hover {
         transform: scale(1.02) rotateZ(0deg);
+    }
+}
+
+/*
+===========================
+MEDIA 1000
+===========================
+*/
+
+@media screen and (min-width:1000px) {
+
+    .c4.lazy > * {
+        grid-column-end: span 3;
     }
 }

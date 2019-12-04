@@ -38,7 +38,32 @@ MEDIA 600
 ===========================
 */
 
-@media screen and (min-width:600px) {}
+@media screen and (min-width:600px) {
+
+    .c2.zigged,
+    .c2.zagged {
+        grid-template-columns: 1fr;
+        justify-items: stretch;
+    }
+
+    .c2.zigged > *,
+    .c2.zagged > * {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 2rem;
+        gap: 2rem;
+    }
+
+    .c2.zigged > * > *,
+    .c2.zagged > * > * {
+        grid-column-end: span 6;
+    }
+
+    .c2.zigged > *:nth-child(even) > *,
+    .c2.zagged > *:nth-child(odd) > * {
+        grid-column-start: 7;
+    }
+}
 
 /*
 ===========================
@@ -60,6 +85,20 @@ MEDIA 800
     }
 }
 
+/*
+===========================
+MEDIA 900
+===========================
+*/
+
+@media screen and (min-width:900px) {
+
+    .c2.zigged > *,
+    .c2.zagged > * {
+        grid-gap: 3rem;
+        gap: 3rem;
+    }
+}
 
 /*
 ===========================
