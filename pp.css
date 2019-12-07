@@ -14,7 +14,6 @@ figcaption {
 
 .grid {
     margin-bottom: 2rem;
-    justify-items: center;
 }
 
 .grid * {
@@ -29,7 +28,11 @@ p + .grid,
 ul + .grid,
 ul + figure,
 figure + ul {
-    margin-top: 3rem;
+    margin-top: 4rem;
+}
+
+.logo > * {
+    margin-bottom: 4rem;
 }
 
 /*
@@ -63,6 +66,11 @@ MEDIA 600
     .c2.zagged > *:nth-child(odd) > * {
         grid-column-start: 7;
     }
+
+    .logo > * {
+        grid-column-start: 4;
+        margin-bottom: 6rem;
+    }
 }
 
 /*
@@ -81,8 +89,9 @@ MEDIA 800
     ul + .grid,
     ul + figure,
     figure + ul {
-        margin-top: 3rem;
+        margin-top: 6rem;
     }
+
 }
 
 /*
