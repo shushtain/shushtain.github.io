@@ -39,6 +39,8 @@ img {
     display: block;
     vertical-align: bottom;
     user-select: none;
+    color: hsl(0, 0%, 90%);
+    line-height: 1.4;
 }
 
 a img {
