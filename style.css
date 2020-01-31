@@ -133,7 +133,8 @@ section > div:nth-child(odd) > *:last-child {
 }
 
 .borders img {
-    border: 3px solid hsla(0, 0%, 100%, 0.2);
+    /*    border: 3px solid hsla(0, 0%, 100%, 0.2);*/
+    background-color: hsla(0, 0%, 100%, 0.02);
 }
 
 summary {
