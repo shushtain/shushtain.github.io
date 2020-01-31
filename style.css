@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    vertical-align: baseline;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: hsl(0, 0%, 8%);
+    color: #fff;
+    max-width: 2000px;
+    margin: 0 auto;
+    font: 1.6rem/1.6 'Montserrat', Arial, sans-serif;
+    padding: 0 2rem;
+}
+
+strong {
+    font-weight: bold;
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+nav a {
+    font-weight: bold;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: bottom;
+    user-select: none;
+    color: #fff;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+nav,
+section > div:nth-child(odd) {
+    max-width: 600px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+nav {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 2.2em;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 1.7em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+p,
+nav {}
+
+ul {
+    padding-left: 2rem;
+}
+
+figcaption {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    font-size: .8em;
+    width: 80%;
+    max-width: 600px;
+    color: hsla(0, 0%, 100%, 0.8);
+}
+
+section {
+    display: grid;
+    grid-gap: 2rem;
+    gap: 2rem;
+}
+
+section:first-child {
+    margin-top: 20rem;
+}
+
+section:last-child {
+    margin-bottom: 10rem;
+}
+
+section:nth-child(n+2) {
+    margin-top: 15rem;
+    border-top: 3px solid white;
+    padding-top: 3rem;
+}
+
+section > div:nth-child(even) {
+    display: grid;
+    grid-gap: 2rem;
+    gap: 2rem;
+}
+
+section > div:nth-child(odd) > *:last-child {
+    margin-bottom: 2rem;
+}
+
+.borders img {
+    border: 3px solid hsla(0, 0%, 100%, 0.2);
+}
+
+summary {
+    margin-bottom: 3rem;
+}
+
+
+/*
+===========================
+MEDIA 400
+===========================
+*/
+
+@media screen and (min-width:400px) {}
+
+/*
+===========================
+MEDIA 600
+===========================
+*/
+
+@media screen and (min-width:600px) {
+    body {
+        padding: 0 3rem;
+        font-size: 1.8rem;
+    }
+
+    section {
+        grid-gap: 3rem;
+        gap: 3rem;
+    }
+
+    section > div:nth-child(even) {
+        grid-gap: 3rem;
+        gap: 3rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    section > div:nth-child(even) > * {
+        grid-column-end: span 6;
+    }
+
+    section > div:nth-child(even) > .s2 {
+        grid-column-end: span 3;
+    }
+
+    section > div:nth-child(even) > .s3 {
+        grid-column-end: span 2;
+    }
+
+}
+
+/*
+===========================
+MEDIA 800
+===========================
+*/
+
+@media screen and (min-width:800px) {
+    body {
+        padding: 0 4rem;
+    }
+
+    section,
+    section > div:nth-child(even) {
+        grid-gap: 4rem;
+        gap: 4rem;
+    }
+}
+
+/*
+===========================
+MEDIA 900
+===========================
+*/
+
+@media screen and (min-width:900px) {
+    section {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    section > div:nth-child(odd) {
+        grid-column-end: span 2;
+    }
+
+    section > div:nth-child(even) {
+        grid-column-end: span 3;
+    }
+
+    section > div:nth-child(even) {
+        padding-top: 1rem;
+    }
+}
+
+/*
+===========================
+MEDIA 1200
+===========================
+*/
+
+@media screen and (min-width:1200px) {
+    body {
+        padding: 0 5rem;
+
+    }
+
+    section > div:nth-child(even) {
+        padding-top: 2rem;
+    }
+
+    section,
+    section > div:nth-child(even) {
+        grid-gap: 5rem;
+        gap: 5rem;
+    }
+}
+
+/*
+===========================
+MEDIA 1400
+===========================
+*/
+
+@media screen and (min-width:1400px) {
+    body {
+        font-size: 2rem;
+    }
+}
