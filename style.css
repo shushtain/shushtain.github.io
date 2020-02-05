@@ -127,6 +127,11 @@ section > div:nth-child(odd) > *:last-child {
     background-color: hsla(0, 0%, 100%, 0.02);
 }
 
+summary {
+    cursor: pointer;
+    display: inline;
+}
+
 
 /*
 ===========================
