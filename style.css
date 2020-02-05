@@ -132,6 +132,12 @@ summary {
     display: inline;
 }
 
+details[open] + *::before {
+    content: '[—]';
+    display: block;
+    margin-bottom: 6rem;
+}
+
 
 /*
 ===========================
