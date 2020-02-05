@@ -130,6 +130,7 @@ section > div:nth-child(odd) > *:last-child {
 summary {
     cursor: pointer;
     display: inline;
+    user-select: none;
 }
 
 details[open] + *::before {
