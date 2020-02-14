@@ -110,11 +110,11 @@ section:first-child {
 }
 
 section:last-child {
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
 }
 
 section:nth-child(n+2) {
-    margin-top: 15rem;
+    margin-top: 10rem;
     border-top: 3px solid white;
     padding-top: 3rem;
 }
@@ -180,6 +180,10 @@ MEDIA 600
 
     section > div:nth-child(even) > .s3 {
         grid-column-end: span 2;
+    }
+
+    section:nth-child(n+2) {
+        margin-top: 15rem;
     }
 
     section:first-child {
