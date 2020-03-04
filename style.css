@@ -43,7 +43,6 @@ img {
     margin: 0 auto;
 }
 
-h1,
 h2,
 h3,
 p,
@@ -74,6 +73,7 @@ header nav {
     font-size: 2.2em;
     line-height: 1.4;
     display: inline-block;
+    vertical-align: top;
 }
 
 header nav {
