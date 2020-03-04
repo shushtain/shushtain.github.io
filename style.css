@@ -148,6 +148,12 @@ section {
     margin-top: 6rem;
 }
 
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.8;
+}
+
 /*
 ===========================
 MEDIA 400
