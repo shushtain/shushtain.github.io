@@ -160,12 +160,7 @@ MEDIA 400
 ===========================
 */
 
-@media screen and (min-width:400px) {
-
-    .s400 {
-        grid-column-end: span 6;
-    }
-}
+@media screen and (min-width:400px) {}
 
 /*
 ===========================
@@ -205,14 +200,6 @@ MEDIA 800
         gap: 4rem;
     }
 
-    .s400 {
-        grid-column-end: span 4;
-    }
-
-    .s800 {
-        grid-column-end: span 6;
-    }
-
     footer {
         margin-top: 15rem;
     }
@@ -242,10 +229,6 @@ MEDIA 1200
     }
 
     .s600 {
-        grid-column-end: span 4;
-    }
-
-    .s400 {
         grid-column-end: span 3;
     }
 }
@@ -264,15 +247,7 @@ MEDIA 1600
 ===========================
 */
 
-@media screen and (min-width:1600px) {
-    .s400 {
-        grid-column-end: span 6;
-    }
-
-    .s800 {
-        grid-column-end: span 4;
-    }
-}
+@media screen and (min-width:1600px) {}
 
 /*
 ===========================
@@ -280,12 +255,7 @@ MEDIA 1800
 ===========================
 */
 
-@media screen and (min-width:1800px) {
-
-    .s600 {
-        grid-column-end: span 3;
-    }
-}
+@media screen and (min-width:1800px) {}
 
 /*
 ===========================
