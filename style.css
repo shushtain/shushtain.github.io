@@ -15,12 +15,11 @@ html {
 body {
     background-color: hsl(0, 0%, 8%);
     color: #fff;
-    max-width: 2000px;
+    max-width: 2400px;
     margin: 0 auto;
     font: 1.6rem/1.6 'Montserrat', Arial, sans-serif;
-    padding: 0 2rem;
+    padding: 10rem 2rem 10rem 2rem;
 }
-
 
 a {
     color: #fff;
@@ -49,8 +48,7 @@ h2,
 h3,
 p,
 ul,
-nav,
-section > div:nth-child(odd) {
+nav {
     max-width: 600px;
 }
 
@@ -67,13 +65,19 @@ h3,
 p,
 ul,
 nav,
-summary {
+details {
     margin-bottom: 3rem;
 }
 
-h1 {
+h1,
+header nav {
     font-size: 2.2em;
     line-height: 1.4;
+    display: inline-block;
+}
+
+header nav {
+    margin-bottom: 2rem;
 }
 
 h2 {
@@ -98,33 +102,9 @@ figcaption {
     color: hsla(0, 0%, 100%, 0.8);
 }
 
-section,
-section > div:nth-child(even) {
-    display: grid;
-    grid-gap: 2rem;
-    gap: 2rem;
-}
 
-section:first-child {
-    margin-top: 10rem;
-}
-
-section:last-child {
-    margin-bottom: 10rem;
-}
-
-section:nth-child(n+2) {
-    margin-top: 10rem;
-    border-top: 3px solid white;
-    padding-top: 3rem;
-}
-
-section > div:nth-child(odd) > *:last-child {
-    margin-bottom: 2rem;
-}
-
-.borders img {
-    background-color: hsla(0, 0%, 100%, 0.02);
+.logos img {
+    background-color: hsl(0, 0%, 10%);
 }
 
 summary {
@@ -133,12 +113,40 @@ summary {
     user-select: none;
 }
 
-details[open] + *::before {
-    content: '[—]';
-    display: block;
-    margin-bottom: 6rem;
+summary + * {
+    margin-top: 3rem;
 }
 
+details[open] + p::before {
+    content: '[—]';
+    display: block;
+    margin-bottom: 4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2rem;
+    gap: 2rem;
+    grid-auto-flow: dense;
+    margin-top: 4rem;
+}
+
+.grid > * {
+    grid-column-end: span 12;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+footer {
+    margin-top: 10rem;
+}
+
+section {
+    margin-top: 6rem;
+}
 
 /*
 ===========================
@@ -146,7 +154,12 @@ MEDIA 400
 ===========================
 */
 
-@media screen and (min-width:400px) {}
+@media screen and (min-width:400px) {
+
+    .s400 {
+        grid-column-end: span 6;
+    }
+}
 
 /*
 ===========================
@@ -156,44 +169,18 @@ MEDIA 600
 
 @media screen and (min-width:600px) {
     body {
-        padding: 0 3rem;
         font-size: 1.8rem;
+        padding: 10rem 3rem 10rem 3rem;
     }
 
-    section,
-    section > div:nth-child(even) {
+    .grid {
         grid-gap: 3rem;
         gap: 3rem;
     }
 
-    section > div:nth-child(even) {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    section > div:nth-child(even) > * {
+    .s600 {
         grid-column-end: span 6;
     }
-
-    section > div:nth-child(even) > .s2 {
-        grid-column-end: span 3;
-    }
-
-    section > div:nth-child(even) > .s3 {
-        grid-column-end: span 2;
-    }
-
-    section:nth-child(n+2) {
-        margin-top: 15rem;
-    }
-
-    section:first-child {
-        margin-top: 20rem;
-    }
-
-    section:last-child {
-        margin-bottom: 10rem;
-    }
-
 }
 
 /*
@@ -204,39 +191,34 @@ MEDIA 800
 
 @media screen and (min-width:800px) {
     body {
-        padding: 0 4rem;
+        padding: 10rem 4rem 15rem 4rem;
     }
 
-    section,
-    section > div:nth-child(even) {
+    .grid {
         grid-gap: 4rem;
         gap: 4rem;
+    }
+
+    .s400 {
+        grid-column-end: span 4;
+    }
+
+    .s800 {
+        grid-column-end: span 6;
+    }
+
+    footer {
+        margin-top: 15rem;
     }
 }
 
 /*
 ===========================
-MEDIA 900
+MEDIA 1000
 ===========================
 */
 
-@media screen and (min-width:900px) {
-    section {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    section > div:nth-child(odd) {
-        grid-column-end: span 2;
-    }
-
-    section > div:nth-child(even) {
-        grid-column-end: span 3;
-    }
-
-    section > div:nth-child(even) {
-        padding-top: 1rem;
-    }
-}
+@media screen and (min-width:1000px) {}
 
 /*
 ===========================
@@ -246,11 +228,19 @@ MEDIA 1200
 
 @media screen and (min-width:1200px) {
     body {
-        padding: 0 5rem;
+        font-size: 2rem;
     }
 
-    section > div:nth-child(even) {
-        padding-top: 2rem;
+    .s1200 {
+        grid-column-end: span 6;
+    }
+
+    .s600 {
+        grid-column-end: span 4;
+    }
+
+    .s400 {
+        grid-column-end: span 3;
     }
 }
 
@@ -260,8 +250,57 @@ MEDIA 1400
 ===========================
 */
 
-@media screen and (min-width:1400px) {
-    body {
-        font-size: 2rem;
+@media screen and (min-width:1400px) {}
+
+/*
+===========================
+MEDIA 1600
+===========================
+*/
+
+@media screen and (min-width:1600px) {
+    .s400 {
+        grid-column-end: span 6;
+    }
+
+    .s800 {
+        grid-column-end: span 4;
     }
 }
+
+/*
+===========================
+MEDIA 1800
+===========================
+*/
+
+@media screen and (min-width:1800px) {
+
+    .s600 {
+        grid-column-end: span 3;
+    }
+}
+
+/*
+===========================
+MEDIA 2000
+===========================
+*/
+
+@media screen and (min-width:2000px) {}
+
+/*
+===========================
+MEDIA 2200
+===========================
+*/
+
+@media screen and (min-width:2200px) {}
+
+/*
+===========================
+MEDIA 2400
+===========================
+*/
+
+@media screen and (min-width:2400px) {}
