@@ -377,9 +377,7 @@ aticle > p + p {
 	}
 
 	.s600 img {
-		background-color: black;
 		box-shadow: none;
-		filter: invert(100%);
 	}
 
 	/* == PAGE BREAK RULES == */
