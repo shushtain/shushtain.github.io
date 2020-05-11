@@ -49,13 +49,12 @@
 
 	/* = img = */
 	--img-full: 1400px;
-	--img-half: 700px;
 
 	/* = spacing = */
 	--basic-space: var(--min-bs-rem);
 	--space-bleed: calc(var(--basic-space) * 2);
 	--space-element: calc(var(--basic-space) * 3);
-	--space-gutter: calc(var(--basic-space) * 3);
+	--space-gutter: calc(var(--basic-space) * 2.7);
 }
 
 body {
@@ -90,7 +89,7 @@ img {
 	user-select: none;
 	text-align: center;
 	color: var(--color-text);
-	box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.2);
+	box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
 }
 
 
@@ -168,6 +167,10 @@ p + figure {
 	margin-top: calc(var(--basic-space) * 6);
 }
 
+p + .s4 {
+	margin-top: calc(var(--basic-space) * 4);
+}
+
 
 /* == NAV == */
 
@@ -188,8 +191,11 @@ figure img {
 }
 
 .s2 img {
-	max-width: var(--img-half);
-	width: 100%;
+	max-width: calc(var(--img-full) / 2);
+}
+
+.s4 img {
+	max-width: calc(var(--img-full) / 4);
 }
 
 figure + figure,
@@ -197,7 +203,8 @@ aticle > p + p {
 	margin-top: var(--space-gutter);
 }
 
-.s2 {
+.s2,
+.s4 {
 	display: grid;
 	grid-gap: var(--space-gutter);
 	gap: var(--space-gutter);
@@ -213,12 +220,27 @@ aticle > p + p {
 }
 
 .s600 img {
-	background-color: hsl(0, 0%, 10%);
+	background-color: hsl(0, 0%, 100%);
 }
 
 .s600 figcaption {
 	margin-top: 3rem;
 	padding-bottom: 6rem;
+}
+
+.s4 a {
+	border: none;
+}
+
+.s4 a img {
+	filter: saturate(0%) contrast(100%);
+	transition: all .5s;
+}
+
+.s4 a:hover img {
+	box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.05);
+	transform: scale(1.05);
+	filter: none;
 }
 
 /* === MEDIA MIN TO MAX === */
@@ -230,7 +252,18 @@ aticle > p + p {
 	}
 }
 
-/* === MEDIA 700 SPLIT & BLEED === */
+/* === MEDIA 350 SPLIT S4/2 === */
+
+@media (min-width:21.875em) {
+
+	.s4 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+}
+
+
+/* === MEDIA 700 SPLIT S2/2 S4/4 & BLEED === */
 
 @media (min-width:43.75em) {
 
@@ -240,6 +273,10 @@ aticle > p + p {
 
 	.s2 {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.s4 {
+		grid-template-columns: repeat(4, 1fr);
 	}
 
 }
@@ -267,12 +304,6 @@ aticle > p + p {
 		--color-bg: hsl(0, 0%, 97%);
 		--color-text: hsl(0, 0%, 0%);
 
-	}
-
-	.s600 img {
-		background-color: black;
-		box-shadow: 0 0 5px hsla(0, 0%, 100%, 0.2);
-		filter: invert(100%);
 	}
 
 }
