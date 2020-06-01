@@ -130,5 +130,14 @@ function RndMinMax(min, max) {
 }
 
 function Save() {
-	bSave.href = canvas.toDataURL('image/png', 1.0);
+	let dataURL = canvas.toDataURL('image/png', 1.0);
+	downloadImage(dataURL, 'till-sm.png');
+}
+
+function downloadImage(data, filename = 'till-sm.png') {
+	let a = document.createElement('a');
+	a.href = data;
+	a.download = filename;
+	document.body.appendChild(a);
+	a.click();
 }
