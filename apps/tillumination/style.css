@@ -82,8 +82,9 @@ main {
 }
 
 footer {
-	margin-bottom: 5vw;
+	margin-bottom: 12rem;
 }
+
 
 section {
 	margin-bottom: 6rem;
@@ -154,7 +155,7 @@ label {
 }
 
 
-/* === MEDIA MIN TO MAX === */
+/* === MEDIA SPLIT === */
 
 @media (min-width:62em) {
 	body {
@@ -188,6 +189,10 @@ label {
 	#cSquareText {
 		max-width: 600px;
 		height: 600px;
+	}
+
+	footer {
+		margin-bottom: 10vw;
 	}
 
 }
