@@ -12,6 +12,7 @@
 	box-sizing: border-box;
 	color: inherit;
 	vertical-align: baseline;
+	/*	transition: all .3s, color 0s, background 0s;*/
 }
 
 :root {
@@ -36,8 +37,8 @@
 	--max-fs-rem: calc(var(--max-fs) * 1rem);
 
 	/* = color scheme = */
-	--color-bg: hsl(0, 0%, 8%);
-	--color-text: hsl(0, 0%, 100%);
+	--color-bg: hsl(0, 0%, 98%);
+	--color-text: hsl(0, 0%, 0%);
 
 	/* = typography = */
 	--font-size: var(--min-fs-rem);
@@ -75,6 +76,11 @@ a {
 a img {
 	border-bottom: none;
 	margin-bottom: -1px;
+	transition: all .5s;
+}
+
+a:hover img {
+	box-shadow: 0 0 6px hsla(0, 0%, 0%, 0.05);
 }
 
 mark {
@@ -89,7 +95,7 @@ img {
 	user-select: none;
 	text-align: center;
 	color: var(--color-text);
-	box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
+	box-shadow: 0 0 3px hsla(0, 0%, 0%, 0.1);
 }
 
 
@@ -168,7 +174,8 @@ p + figure {
 }
 
 p + .s4 {
-	margin-top: calc(var(--basic-space) * 4);
+	margin-top: calc(var(--basic-space) * 5);
+	margin-bottom: calc(var(--basic-space) * 5);
 }
 
 
@@ -221,6 +228,7 @@ aticle > p + p {
 
 .s600 img {
 	background-color: hsl(0, 0%, 100%);
+	opacity: .9;
 }
 
 .s600 figcaption {
@@ -230,17 +238,11 @@ aticle > p + p {
 
 .s4 a {
 	border: none;
-}
 
-.s4 a img {
-	filter: saturate(0%) contrast(100%);
-	transition: all .5s;
 }
 
 .s4 a:hover img {
-	box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.05);
 	transform: scale(1.05);
-	filter: none;
 }
 
 /* === MEDIA MIN TO MAX === */
@@ -294,15 +296,15 @@ aticle > p + p {
 
 /* === MEDIA LIGHT COLOR SCHEME === */
 
-@media (prefers-color-scheme:light) {
+@media (prefers-color-scheme:dark) {
 
 	/* == COMMON == */
 
 	:root {
 
 		/* = color scheme = */
-		--color-bg: hsl(0, 0%, 97%);
-		--color-text: hsl(0, 0%, 0%);
+		--color-bg: hsl(0, 0%, 10%);
+		--color-text: hsl(0, 0%, 100%);
 
 	}
 
