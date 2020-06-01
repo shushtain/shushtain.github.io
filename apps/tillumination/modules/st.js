@@ -130,11 +130,5 @@ function RndMinMax(min, max) {
 }
 
 function Save() {
-	let dataURL = canvas.toDataURL('image/png');
-	let a = document.createElement('a');
-	a.href = dataURL;
-	a.download = 'till-sm.png';
-	document.body.appendChild(a);
-	a.click();
-
+	bSave.href = canvas.toDataURL('image/png', 1.0);
 }
