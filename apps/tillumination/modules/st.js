@@ -103,14 +103,12 @@ function Bg(num) {
 function Text(text) {
 	let lines = text.split('\n');
 	let j = -1;
-	console.log(lines);
 	lines = lines.filter(function (el) {
 		return el != '';
 	});
 	lines = lines.filter(function (el) {
 		return el != null;
 	});
-	console.log(lines);
 	ctx.fillStyle = "white";
 	ctx.textAlign = "center";
 	for (let i = 0; i < lines.length; i++) {
