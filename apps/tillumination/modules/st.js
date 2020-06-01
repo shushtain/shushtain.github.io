@@ -25,7 +25,8 @@ iColor.addEventListener('change', function () {
 	Update();
 });
 bSave.addEventListener('click', function () {
-	Save();
+	let dataURL = canvas.toDataURL('image/png', 1.0);
+	downloadImage(dataURL, 'till-sm.png');
 });
 
 function Load() {
@@ -127,11 +128,6 @@ function RndMax(max) {
 
 function RndMinMax(min, max) {
 	return Math.round(Math.random() * (max - min) + min);
-}
-
-function Save() {
-	let dataURL = canvas.toDataURL('image/png', 1.0);
-	downloadImage(dataURL, 'till-sm.png');
 }
 
 function downloadImage(data, filename = 'till-sm.png') {
