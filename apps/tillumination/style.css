@@ -1,0 +1,184 @@
+/*
+=== GENERAL ===
+*/
+
+/* == COMMON == */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font: inherit;
+	box-sizing: border-box;
+	color: inherit;
+	vertical-align: baseline;
+}
+
+:root {
+	font-size: 62.5%;
+
+	/* = color scheme = */
+	--color-bg: hsl(0, 0%, 10%);
+	--color-text: hsl(0, 0%, 100%);
+}
+
+body {
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	padding: 0 2rem;
+	margin: 0 auto;
+	font: 1.6rem/1.6 'Montserrat Alternates', Arial, sans-serif;
+}
+
+a {
+	color: var(--color-text);
+	text-decoration: none;
+	border-bottom: 1px solid var(--color-text);
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	user-select: none;
+	text-align: center;
+	color: var(--color-text);
+	box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.1);
+}
+
+
+/* == TEXT == */
+
+h1 {
+	font-weight: bold;
+	font-size: 2em;
+	/*	text-align: center;*/
+}
+
+h2 {
+	font-size: 1.5em;
+	margin-block-end: 6rem;
+	font-weight: bold;
+	/*	border-top: 1px solid white;*/
+	padding-top: 3rem;
+	/*	text-align: center;*/
+	/*	text-transform: uppercase;*/
+}
+
+ul {
+	padding-inline-start: 2rem;
+}
+
+/* == SCTRUCTURE == */
+
+header,
+main,
+footer {
+	margin: 6rem auto;
+	max-width: 600px;
+}
+
+main {
+	margin-bottom: 12rem;
+}
+
+footer {
+	margin-bottom: 5vw;
+}
+
+section {
+	margin-bottom: 6rem;
+}
+
+.container {
+	display: grid;
+	grid-gap: 4rem;
+	gap: 4rem;
+}
+
+#elSquareText {
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+.container > div:last-child {
+	max-width: 600px;
+}
+
+.container > div:first-child {
+	max-width: 300px;
+	/*	margin: 0 auto;*/
+}
+
+
+/* == NAV == */
+
+/* == FIGURE == */
+
+/* == CUSTOM == */
+
+#cSquareText {
+	width: 100%;
+	max-width: 600px;
+	height: calc(100vw-4rem);
+}
+
+label {
+	display: block;
+	padding: 0;
+	margin: 0;
+	padding-inline-start: 10px;
+	margin-bottom: 10px;
+}
+
+#iColorSquareText {
+	background-color: var(--color-bg);
+	border: 1px solid var(--color-text);
+	padding: 5px 10px;
+	margin-bottom: 20px;
+}
+
+#iTextSquareText {
+	background-color: var(--color-bg);
+	border: 1px solid var(--color-text);
+	padding: 5px 10px;
+	margin-bottom: 20px;
+}
+
+
+/* === MEDIA MIN TO MAX === */
+
+@media (min-width:62em) {
+	body {
+		font-size: 1.8rem;
+	}
+
+	.container {
+		grid-template-columns: 600px 300px;
+		grid-auto-flow: dense;
+	}
+
+	.container > div:last-child {
+		grid-column: 1;
+	}
+
+	.container > div:first-child {
+		grid-column: 2;
+	}
+
+	#elSquareText {
+		margin: 0 auto;
+		max-width: 900px;
+	}
+
+	header,
+	main,
+	footer {
+		max-width: 900px;
+	}
+
+	#cSquareText {
+		max-width: 600px;
+		height: 600px;
+	}
+
+}
