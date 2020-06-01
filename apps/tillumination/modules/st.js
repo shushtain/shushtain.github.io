@@ -3,6 +3,7 @@ import * as c from '/apps/tillumination/modules/dbColors.js';
 let canvas = document.getElementById('cSquareText');
 let iText = document.getElementById('iTextSquareText');
 let iColor = document.getElementById('iColorSquareText');
+let bSave = document.getElementById('bSaveSquareText');
 let ctx = canvas.getContext('2d');
 
 let x0 = canvas.width / 2;
@@ -22,6 +23,9 @@ iText.addEventListener('change', function () {
 });
 iColor.addEventListener('change', function () {
 	Update();
+});
+bSave.addEventListener('click', function () {
+	Save();
 });
 
 function Load() {
@@ -123,4 +127,8 @@ function RndMax(max) {
 
 function RndMinMax(min, max) {
 	return Math.round(Math.random() * (max - min) + min);
+}
+
+function Save() {
+	bSave.href = canvas.toDataURL('image/png');
 }
