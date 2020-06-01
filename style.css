@@ -37,8 +37,8 @@
 	--max-fs-rem: calc(var(--max-fs) * 1rem);
 
 	/* = color scheme = */
-	--color-bg: hsl(0, 0%, 98%);
-	--color-text: hsl(0, 0%, 0%);
+	--color-bg: hsl(0, 0%, 10%);
+	--color-text: hsl(0, 0%, 100%);
 
 	/* = typography = */
 	--font-size: var(--min-fs-rem);
@@ -228,7 +228,6 @@ aticle > p + p {
 
 .s600 img {
 	background-color: hsl(0, 0%, 100%);
-	opacity: .9;
 }
 
 .s600 figcaption {
@@ -296,15 +295,15 @@ aticle > p + p {
 
 /* === MEDIA LIGHT COLOR SCHEME === */
 
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme:light) {
 
 	/* == COMMON == */
 
 	:root {
 
 		/* = color scheme = */
-		--color-bg: hsl(0, 0%, 10%);
-		--color-text: hsl(0, 0%, 100%);
+		--color-bg: hsl(0, 0%, 98%);
+		--color-text: hsl(0, 0%, 0%);
 
 	}
 
