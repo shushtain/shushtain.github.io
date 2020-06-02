@@ -91,14 +91,14 @@ function Bg(num) {
 
 		ctx.fillStyle = 'hsl(' + hue + ', ' + RndMinMax(85, 95) + '%, ' + RndMinMax(50, 60) + '%)';
 		ctx.beginPath();
+		ctx.translate(x0, y0);
+		ctx.rotate(RndMinMax(45, 270) * Math.PI / 180);
+		ctx.translate(-x0, -y0);
 		ctx.moveTo(x1, y1);
 		ctx.lineTo(x2, y2);
 		ctx.lineTo(x3, y3);
 		ctx.lineTo(x4, y4);
 		ctx.fill();
-		ctx.translate(x0, y0);
-		ctx.rotate(RndMinMax(45, 270) * Math.PI / 180);
-		ctx.translate(-x0, -y0);
 		ctx.closePath();
 	}
 	ctx.setTransform(1, 0, 0, 1, 0, 0);
