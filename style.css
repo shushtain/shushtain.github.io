@@ -89,7 +89,8 @@ mark {
 	padding: 0 .5rem;
 }
 
-img {
+img,
+video {
 	max-width: 100%;
 	display: block;
 	user-select: none;
