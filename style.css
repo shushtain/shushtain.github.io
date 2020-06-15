@@ -175,8 +175,8 @@ p + figure {
 }
 
 p + .s4 {
-	margin-top: calc(var(--basic-space) * 4.5);
-	margin-bottom: calc(var(--basic-space) * 4.5);
+	margin-top: calc(var(--basic-space) * 5);
+	margin-bottom: calc(var(--basic-space) * 5);
 }
 
 
