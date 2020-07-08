@@ -165,8 +165,7 @@ figure + p {
 }
 
 .s600 figcaption {
-	margin-top: 2rem;
-	padding-bottom: 4rem;
+	margin-top: calc(var(--basic-space) * 1);
 	line-height: 1.4;
 }
 
@@ -216,6 +215,18 @@ figure + p {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
+	p {
+		margin-bottom: 2rem;
+	}
+
+	p + p {
+		margin-top: -3rem;
+	}
+
+	p + figure {
+		margin-top: 0;
+	}
+
 	h1,
 	figure,
 	p {
@@ -252,18 +263,6 @@ figure + p {
 		grid-auto-flow: dense;
 	}
 
-	p + p {
-		margin-top: 0;
-	}
-
-	p + figure {
-		margin-top: 0;
-	}
-
-	figure + p {
-		margin-top: 0;
-	}
-
 	h1 {
 		grid-column-end: span 3;
 		margin-bottom: calc(var(--basic-space) * 1.5);
@@ -272,6 +271,15 @@ figure + p {
 	p {
 		grid-column-start: 1;
 		grid-column-end: span 1;
+		margin-bottom: 0;
+	}
+
+	p + p {
+		margin-top: 0;
+	}
+
+	figure + p {
+		margin-top: 0;
 	}
 
 	figure {
