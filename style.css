@@ -144,7 +144,6 @@ figure img {
 }
 
 figcaption {
-	font-size: .8em;
 	margin-top: calc(var(--basic-space) * 1);
 	line-height: 1.4;
 }
