@@ -131,6 +131,10 @@ label {
 	margin-bottom: 10px;
 }
 
+select {
+	overflow: hidden;
+}
+
 #iColorSquareText {
 	background-color: var(--color-bg);
 	border: 1px solid var(--color-text);
