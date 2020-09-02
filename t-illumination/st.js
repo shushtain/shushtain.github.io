@@ -1,9 +1,4 @@
-import * as c from '/apps/tillumination/modules/dbColors.js';
-
 let canvas = document.getElementById('cSquareText');
-let iText = document.getElementById('iTextSquareText');
-let iColor = document.getElementById('iColorSquareText');
-let bSave = document.getElementById('bSaveSquareText');
 let ctx = canvas.getContext('2d');
 
 let x0 = canvas.width / 2;
@@ -18,16 +13,6 @@ window.addEventListener('load', Load());
 canvas.addEventListener('click', function () {
 	Update();
 });
-iText.addEventListener('change', function () {
-	Update();
-});
-iColor.addEventListener('change', function () {
-	Update();
-});
-bSave.addEventListener('click', function () {
-	let dataURL = canvas.toDataURL('image/png', 1.0);
-	downloadImage(dataURL, 'till-sm.png');
-});
 
 function Load() {
 	Update();
@@ -35,23 +20,12 @@ function Load() {
 
 function Update() {
 	Bg(3);
-	Text(iText.value);
 }
 
 function Bg(num) {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = 'white';
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
-	switch (iColor.value) {
-		case 'trans':
-			num = 2;
-			break;
-		case 'nonbinary':
-			num = 2;
-			break;
-		default:
-			num = 3;
-	}
 	ctx.globalAlpha = .9;
 	for (let i = 0; i < num; i++) {
 		let x1 = 0;
@@ -67,18 +41,7 @@ function Bg(num) {
 		let h = canvas.height * 1.5;
 		let incr = w * RndMinMax(2, 3);
 
-		let hue;
-
-		switch (iColor.value) {
-			case 'trans':
-				hue = c.TRANS[i];
-				break;
-			case 'nonbinary':
-				hue = c.NONBINARY[i];
-				break;
-			default:
-				hue = RndMax(360);
-		}
+		let hue = RndMax(360);
 
 		x1 = x1 + x0 - w / 2;
 		y1 = y1 + y0 - h / 2;
@@ -103,23 +66,10 @@ function Bg(num) {
 	}
 	ctx.setTransform(1, 0, 0, 1, 0, 0);
 	ctx.globalAlpha = 1;
-}
 
-function Text(text) {
-	let lines = text.split('\n');
-	let j = -1;
-	lines = lines.filter(function (el) {
-		return el != '';
-	});
-	lines = lines.filter(function (el) {
-		return el != null;
-	});
 	ctx.fillStyle = "white";
 	ctx.textAlign = "center";
-	for (let i = 0; i < lines.length; i++) {
-		ctx.fillText(lines[i], x0, y0 + fontSize / 4 - (lines.length - 1) * lineHeight / 2 + i * lineHeight);
-	}
-
+	ctx.fillText("Click me!", x0, y0);
 }
 
 function RndMax(max) {
@@ -128,12 +78,4 @@ function RndMax(max) {
 
 function RndMinMax(min, max) {
 	return Math.round(Math.random() * (max - min) + min);
-}
-
-function downloadImage(data, filename = 'till-sm.png') {
-	let a = document.createElement('a');
-	a.href = data;
-	a.download = filename;
-	document.body.appendChild(a);
-	a.click();
 }

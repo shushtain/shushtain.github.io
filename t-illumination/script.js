@@ -1,4 +1,4 @@
-import * as st from '/apps/tillumination/modules/st.js';
+import * as st from '/t-illumination/st.js';
 
 
 function Load() {}

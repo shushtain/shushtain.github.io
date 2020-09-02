@@ -149,7 +149,8 @@ figcaption {
 }
 
 
-.s2 img {
+.s2 img,
+.s2 canvas {
 	max-width: calc(var(--img-full) / 2);
 }
 
@@ -165,6 +166,12 @@ figcaption {
 
 .portfolio a:hover img {
 	transform: scale(1.05);
+}
+
+#cSquareText {
+	width: 100%;
+	max-width: 700px;
+	max-height: 700px;
 }
 
 /*
