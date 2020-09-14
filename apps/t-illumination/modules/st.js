@@ -12,7 +12,7 @@ let y0 = canvas.height / 2;
 let fontSize = 90;
 let lineHeight = 120;
 
-ctx.font = 'bold ' + fontSize + 'px "Montserrat Alternates"';
+ctx.font = 'bold ' + fontSize + 'px "Montserrat Alternates", sans-serif';
 
 window.addEventListener('load', Load());
 canvas.addEventListener('click', function () {
