@@ -48,7 +48,7 @@
 }
 
 body {
-	background-color: var(--color-bg);
+	background: var(--color-bg);
 	color: var(--color-text);
 	padding: 0 calc(var(--basic-space) * 2);
 	margin: 0 auto;
@@ -95,7 +95,7 @@ h1 {
 
 mark {
 	color: var(--color-bg);
-	background-color: var(--color-text);
+	background: var(--color-text);
 	padding: 0 .5rem;
 }
 
@@ -161,7 +161,7 @@ figcaption {
 /* == CUSTOM == */
 
 .s600 img {
-	background-color: hsl(0, 0%, 100%);
+	background: hsl(0, 0%, 100%);
 }
 
 .portfolio a:hover img {
