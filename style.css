@@ -270,6 +270,7 @@ figcaption {
 		grid-column-start: 1;
 		grid-column-end: span 1;
 		margin-bottom: 0;
+		margin-inline-end: 3rem;
 	}
 
 	p + p {
