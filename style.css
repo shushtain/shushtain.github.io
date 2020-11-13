@@ -263,7 +263,7 @@ figcaption {
 
 	h1 {
 		grid-column-end: span 3;
-		margin-bottom: calc(var(--basic-space) * 1.5);
+		margin-bottom: calc(var(--basic-space) * 3);
 	}
 
 	p {
