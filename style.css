@@ -129,6 +129,7 @@ h3 {
 h1,
 h2 {
   margin-bottom: var(--s-s);
+  word-wrap: break-word;
 }
 
 h1,
