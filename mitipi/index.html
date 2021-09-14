@@ -3,9 +3,9 @@
 
 <head>
 	<!--GENERAL-->
-	<link rel="preload" href="/fonts.css?ver=15.2.0" as="style">
-	<link rel="stylesheet" href="/fonts.css?ver=15.2.0">
-	<link rel="stylesheet" href="/style.css?ver=15.2.0">
+	<link rel="preload" href="/fonts.css?ver=19.0.0" as="style">
+	<link rel="stylesheet" href="/fonts.css?ver=19.0.0">
+	<link rel="stylesheet" href="/style.css?ver=19.0.0">
 	<link rel="icon" sizes="192x192" href="/android-icon-192x192.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
 	<link rel="icon" sizes="96x96" href="/favicon-96x96.png">
@@ -18,33 +18,41 @@
 
 <body>
 	<header>
-		<nav><a href="/" accesskey="h">Artem Shush</a>&nbsp;</nav>
+		<nav aria-label="Main">
+			<ul>
+				<li><a href="#content" class="skip">Skip to content</a></li>
+				<li><a href="/">Artem Shush</a></li>
+			</ul>
+			<ul class="desktop-only">
+				<li><a href="/living-mirror/">Living Mirror</a></li>
+				<li><a href="/inspiration-family/">Inspiration Family</a></li>
+				<li><a href="/greenverd/">Greenverd</a></li>
+				<li><a href="/evergreen-mortgage/">Evergreen Mortgage</a></li>
+				<li><a href="/logofolio/">Logofolio</a></li>
+			</ul>
+		</nav>
 	</header>
-	<main>
+	<main id="content">
 		<article>
 			<h1>Mitipi</h1>
 			<p>Mitipi is a smart insurance company. They provide technological ways to prevent burglaries and offer customizable insurance packages.</p>
 			<figure>
-				<img src="mitipi-pp-posters-800.jpg" sizes="100vw" srcset="
+				<img src="mitipi-pp-posters.jpg" sizes="(min-width: 100em) 75vw, 100vw" srcset="
+									mitipi-pp-posters-1800.jpg 1800w,
+									mitipi-pp-posters-1600.jpg 1600w,
+									mitipi-pp-posters-1400.jpg 1400w,
 									mitipi-pp-posters-1200.jpg 1200w,
 									mitipi-pp-posters-1000.jpg 1000w,
 									mitipi-pp-posters-800.jpg 800w,
 									mitipi-pp-posters-600.jpg 600w,
 									mitipi-pp-posters-400.jpg 400w" alt="">
 			</figure>
-			<p>The logo is based on the shape of the main product, Kevin. This smart hub can simulate people&rsquo;s presence with light and sound.</p>
-			<p>The mark also looks like an object under the light source.</p>
-			<figure>
-				<img src="mitipi-pp-logo-800.jpg" sizes="100vw" srcset="
-									mitipi-pp-logo-1200.jpg 1200w,
-									mitipi-pp-logo-1000.jpg 1000w,
-									mitipi-pp-logo-800.jpg 800w,
-									mitipi-pp-logo-600.jpg 600w,
-									mitipi-pp-logo-400.jpg 400w" alt="">
-			</figure>
 			<p>The main color is yellow. The color of warm and cozy light. The color of windows that scare burglars off. The color that confronts all those traditional insurance companies painted blue.</p>
 			<figure>
-				<img src="mitipi-pp-ui-desktop-light-mockup-800.jpg" sizes="100vw" srcset="
+				<img src="mitipi-pp-ui-desktop-light-mockup.jpg" sizes="(min-width: 100em) 75vw, 100vw" srcset="
+									mitipi-pp-ui-desktop-light-mockup-1800.jpg 1800w,
+									mitipi-pp-ui-desktop-light-mockup-1600.jpg 1600w,
+									mitipi-pp-ui-desktop-light-mockup-1400.jpg 1400w,
 									mitipi-pp-ui-desktop-light-mockup-1200.jpg 1200w,
 									mitipi-pp-ui-desktop-light-mockup-1000.jpg 1000w,
 									mitipi-pp-ui-desktop-light-mockup-800.jpg 800w,
@@ -52,7 +60,10 @@
 									mitipi-pp-ui-desktop-light-mockup-400.jpg 400w" alt="">
 			</figure>
 			<figure>
-				<img src="mitipi-pp-ui-desktop-light-800.jpg" sizes="100vw" srcset="
+				<img src="mitipi-pp-ui-desktop-light.jpg" sizes="(min-width: 100em) 75vw, 100vw" srcset="
+									mitipi-pp-ui-desktop-light-1800.jpg 1800w,
+									mitipi-pp-ui-desktop-light-1600.jpg 1600w,
+									mitipi-pp-ui-desktop-light-1400.jpg 1400w,
 									mitipi-pp-ui-desktop-light-1200.jpg 1200w,
 									mitipi-pp-ui-desktop-light-1000.jpg 1000w,
 									mitipi-pp-ui-desktop-light-800.jpg 800w,
@@ -60,7 +71,10 @@
 									mitipi-pp-ui-desktop-light-400.jpg 400w" alt="">
 			</figure>
 			<figure>
-				<img src="mitipi-pp-ui-desktop-dark-mockup-800.jpg" sizes="100vw" srcset="
+				<img src="mitipi-pp-ui-desktop-dark-mockup.jpg" sizes="(min-width: 100em) 75vw, 100vw" srcset="
+									mitipi-pp-ui-desktop-dark-mockup-1800.jpg 1800w,
+									mitipi-pp-ui-desktop-dark-mockup-1600.jpg 1600w,
+									mitipi-pp-ui-desktop-dark-mockup-1400.jpg 1400w,
 									mitipi-pp-ui-desktop-dark-mockup-1200.jpg 1200w,
 									mitipi-pp-ui-desktop-dark-mockup-1000.jpg 1000w,
 									mitipi-pp-ui-desktop-dark-mockup-800.jpg 800w,
@@ -68,19 +82,27 @@
 									mitipi-pp-ui-desktop-dark-mockup-400.jpg 400w" alt="">
 			</figure>
 			<figure>
-				<img src="mitipi-pp-ui-desktop-dark-800.jpg" sizes="100vw" srcset="
+				<img src="mitipi-pp-ui-desktop-dark.jpg" sizes="(min-width: 100em) 75vw, 100vw" srcset="
+									mitipi-pp-ui-desktop-dark-1800.jpg 1800w,
+									mitipi-pp-ui-desktop-dark-1600.jpg 1600w,
+									mitipi-pp-ui-desktop-dark-1400.jpg 1400w,
 									mitipi-pp-ui-desktop-dark-1200.jpg 1200w,
 									mitipi-pp-ui-desktop-dark-1000.jpg 1000w,
 									mitipi-pp-ui-desktop-dark-800.jpg 800w,
 									mitipi-pp-ui-desktop-dark-600.jpg 600w,
 									mitipi-pp-ui-desktop-dark-400.jpg 400w" alt="">
 			</figure>
-
+			<section class="cta">
+				<p>Ready to discover your brand?<br />
+					<a href="mailto:shushtain@gmail.com" target="_blank">shushtain@gmail.com</a>
+				</p>
+			</section>
 		</article>
 	</main>
 	<footer>
-		<p>Ready to discover your brand?<br /><a href="mailto:shushtain@gmail.com" target="_blank" accesskey="m">shushtain@gmail.com</a></p>
-		<nav><a href="/" accesskey="b">&larr; Back</a></nav>
+		<nav aria-label="Bottom">
+			<a href="/">&larr; Back</a>
+		</nav>
 	</footer>
 </body>
 

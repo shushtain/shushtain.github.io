@@ -3,9 +3,9 @@
 
 <head>
 	<!--GENERAL-->
-	<link rel="preload" href="/fonts.css?ver=15.2.0" as="style">
-	<link rel="stylesheet" href="/fonts.css?ver=15.2.0">
-	<link rel="stylesheet" href="/style.css?ver=15.2.0">
+	<link rel="preload" href="/fonts.css?ver=19.0.0" as="style">
+	<link rel="stylesheet" href="/fonts.css?ver=19.0.0">
+	<link rel="stylesheet" href="/style.css?ver=19.0.0">
 	<link rel="icon" sizes="192x192" href="/android-icon-192x192.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
 	<link rel="icon" sizes="96x96" href="/favicon-96x96.png">
@@ -18,14 +18,29 @@
 
 <body>
 	<header>
-		<nav><a href="/" accesskey="h">Artem Shush</a>&nbsp;</nav>
+		<nav aria-label="Main">
+			<ul>
+				<li><a href="#content" class="skip">Skip to content</a></li>
+				<li><a href="/">Artem Shush</a></li>
+			</ul>
+			<ul class="desktop-only">
+				<li><a href="/mitipi/">Mitipi</a></li>
+				<li><a href="/living-mirror/">Living Mirror</a></li>
+				<li><a href="/inspiration-family/">Inspiration Family</a></li>
+				<li><a href="/evergreen-mortgage/">Evergreen Mortgage</a></li>
+				<li><a href="/logofolio/">Logofolio</a></li>
+			</ul>
+		</nav>
 	</header>
-	<main>
+	<main id="content">
 		<article>
 			<h1>Greenverd</h1>
-			<p>Greenverd is an online zero waste store. Their belief is that you don&rsquo;t need to compromise on comfort and convenience to have a zero waste life.</p>
+			<p>Greenverd is an online zero waste store. Their belief is that you don’t need to compromise on comfort and convenience to have a zero waste life.</p>
 			<figure>
-				<img src="greenverd-pp-sm-800.jpg" sizes="100vw" srcset="
+				<img src="greenverd-pp-sm.jpg" sizes="(min-width: 100em) 75vw, 100vw" srcset="
+									greenverd-pp-sm-1800.jpg 1800w,
+									greenverd-pp-sm-1600.jpg 1600w,
+									greenverd-pp-sm-1400.jpg 1400w,
 									greenverd-pp-sm-1200.jpg 1200w,
 									greenverd-pp-sm-1000.jpg 1000w,
 									greenverd-pp-sm-800.jpg 800w,
@@ -33,15 +48,10 @@
 									greenverd-pp-sm-400.jpg 400w" alt="">
 			</figure>
 			<figure>
-				<img src="greenverd-pp-logo-800.jpg" sizes="100vw" srcset="
-									greenverd-pp-logo-1200.jpg 1200w,
-									greenverd-pp-logo-1000.jpg 1000w,
-									greenverd-pp-logo-800.jpg 800w,
-									greenverd-pp-logo-600.jpg 600w,
-									greenverd-pp-logo-400.jpg 400w" alt="">
-			</figure>
-			<figure>
-				<img src="greenverd-pp-ui-desktop-1-800.jpg" sizes="100vw" srcset="
+				<img src="greenverd-pp-ui-desktop-1.jpg" sizes="(min-width: 100em) 75vw, 100vw" srcset="
+									greenverd-pp-ui-desktop-1-1800.jpg 1800w,
+									greenverd-pp-ui-desktop-1-1600.jpg 1600w,
+									greenverd-pp-ui-desktop-1-1400.jpg 1400w,
 									greenverd-pp-ui-desktop-1-1200.jpg 1200w,
 									greenverd-pp-ui-desktop-1-1000.jpg 1000w,
 									greenverd-pp-ui-desktop-1-800.jpg 800w,
@@ -49,7 +59,10 @@
 									greenverd-pp-ui-desktop-1-400.jpg 400w" alt="">
 			</figure>
 			<figure>
-				<img src="greenverd-pp-ui-desktop-2-800.jpg" sizes="100vw" srcset="
+				<img src="greenverd-pp-ui-desktop-2.jpg" sizes="(min-width: 100em) 75vw, 100vw" srcset="
+									greenverd-pp-ui-desktop-2-1800.jpg 1800w,
+									greenverd-pp-ui-desktop-2-1600.jpg 1600w,
+									greenverd-pp-ui-desktop-2-1400.jpg 1400w,
 									greenverd-pp-ui-desktop-2-1200.jpg 1200w,
 									greenverd-pp-ui-desktop-2-1000.jpg 1000w,
 									greenverd-pp-ui-desktop-2-800.jpg 800w,
@@ -57,18 +70,27 @@
 									greenverd-pp-ui-desktop-2-400.jpg 400w" alt="">
 			</figure>
 			<figure>
-				<img src="greenverd-pp-ui-desktop-3-800.jpg" sizes="100vw" srcset="
+				<img src="greenverd-pp-ui-desktop-3.jpg" sizes="(min-width: 100em) 75vw, 100vw" srcset="
+									greenverd-pp-ui-desktop-3-1800.jpg 1800w,
+									greenverd-pp-ui-desktop-3-1600.jpg 1600w,
+									greenverd-pp-ui-desktop-3-1400.jpg 1400w,
 									greenverd-pp-ui-desktop-3-1200.jpg 1200w,
 									greenverd-pp-ui-desktop-3-1000.jpg 1000w,
 									greenverd-pp-ui-desktop-3-800.jpg 800w,
 									greenverd-pp-ui-desktop-3-600.jpg 600w,
 									greenverd-pp-ui-desktop-3-400.jpg 400w" alt="">
 			</figure>
+			<section class="cta">
+				<p>Ready to discover your brand?<br />
+					<a href="mailto:shushtain@gmail.com" target="_blank">shushtain@gmail.com</a>
+				</p>
+			</section>
 		</article>
 	</main>
 	<footer>
-		<p>Ready to discover your brand?<br /><a href="mailto:shushtain@gmail.com" target="_blank" accesskey="m">shushtain@gmail.com</a></p>
-		<nav><a href="/" accesskey="b">&larr; Back</a></nav>
+		<nav aria-label="Bottom">
+			<a href="/">&larr; Back</a>
+		</nav>
 	</footer>
 </body>
 
