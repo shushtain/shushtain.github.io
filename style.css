@@ -20,9 +20,9 @@
   --max-cw: calc(var(--max-vw) * .75);
 
   /* = colors = */
-  --color-bg: hsl(0, 0%, 6%);
-  --color-text: hsl(0, 0%, 100%);
-  --color-link: hsl(220, 10%, 90%);
+  --color-bg: hsl(222, 6%, 6%);
+  --color-text: hsl(222, 6%, 100%);
+  --color-link: hsl(222, 12%, 88%);
 
   /* = typography = */
   --min-fs: calc(18 / 16);
@@ -65,7 +65,7 @@ nav a,
   display: inline-block;
   color: var(--color-text);
   text-decoration: none;
-  background-color: hsla(220, 10%, 15%, 1);
+  background-color: hsl(222, 12%, 12%);
   border-radius: calc(var(--s) / 2);
   padding: calc(var(--s) / 2) var(--s);
   transition: background-color .2s;
@@ -75,7 +75,7 @@ nav a:hover,
 #works a:hover h3,
 nav a:focus,
 #works a:focus h3 {
-  background-color: hsla(220, 10%, 20%, 1);
+  background-color: hsl(222, 12%, 18%);
 }
 
 img,
