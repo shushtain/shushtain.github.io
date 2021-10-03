@@ -23,6 +23,7 @@
   --color-bg: hsl(222, 6%, 6%);
   --color-text: hsl(222, 6%, 100%);
   --color-link: hsl(222, 12%, 88%);
+  --color-caption: hsl(222, 12%, 82%);
 
   /* = typography = */
   --min-fs: calc(18 / 16);
@@ -48,6 +49,10 @@
 /*
 === COMMON ===
 */
+
+strong {
+  font-weight: bold;
+}
 
 a {
   text-decoration: underline;
@@ -93,7 +98,9 @@ figure {
 
 figcaption {
   max-width: var(--ll);
-  margin-bottom: calc(var(--s) * 2);
+  font-size: .8em;
+  color: var(--color-caption);
+  margin-top: calc(var(--s) / 2);
 }
 
 nav {
