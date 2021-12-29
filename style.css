@@ -64,10 +64,15 @@ a {
   margin-right: calc(var(--s) / 2);
 } */
 
-a[href$=".pdf"]::before {
-  content: "📄";
-  margin-right: calc(var(--s) / 2);
+/* a[href$=".pdf"]::before {
+  content: "[";
+  text-decoration: none;
 }
+
+a[href$=".pdf"]::after {
+  content: "]";
+  text-decoration: none;
+} */
 
 a:hover {
   text-decoration: underline;
