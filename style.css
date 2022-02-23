@@ -22,13 +22,13 @@
   --cw: 100vw;
 
   /* = colors = */
-  --color-bg: hsl(220, 12%, 8%);
-  --color-text: hsl(220, 12%, 100%);
+  --color-bg: hsl(220, 10%, 10%);
+  --color-text: hsl(220, 10%, 100%);
   --color-accent: hsl(190, 100%, 50%);
 
   /* = typography = */
   --min-fs: calc(18 / 16);
-  --max-fs: calc(26 / 16);
+  --max-fs: calc(24 / 16);
   --fs: var(--min-fs-rem);
   --fsr: 1.4;
   --lh: 1.5;
@@ -58,8 +58,19 @@ strong {
 
 a {
   text-decoration: none;
+  font-weight: bold;
   color: var(--color-accent);
 }
+
+nav a {
+  font-weight: normal;
+  color: var(--color-text);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 
 /* a[href^="mailto:"]::before {
   content: "📧";
@@ -75,10 +86,6 @@ a[href$=".pdf"]::after {
   content: "]";
   text-decoration: none;
 } */
-
-a:hover {
-  text-decoration: underline;
-}
 
 img,
 video {
@@ -233,6 +240,7 @@ footer>nav {
 }
 
 #works a {
+  font-weight: normal;
   color: var(--color-text);
 }
 
@@ -242,8 +250,6 @@ footer>nav {
 
 #works a h3 {
   color: var(--color-accent);
-  /* background-color: var(--color-accent); */
-  display: inline;
 }
 
 #works a:hover h3 {
