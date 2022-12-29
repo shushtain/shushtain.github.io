@@ -200,10 +200,7 @@ footer {
 === CUSTOM ===
 */
 
-.logo-mockup {
-	filter: invert();
-}
-
+/*
 div {
 	pointer-events: none;
 }
@@ -226,7 +223,7 @@ div:hover figure {
 div figure:hover {
 	opacity: 1;
 	filter: grayscale(0);
-}
+}*/
 
 /*
 === MEDIA 400 ===
