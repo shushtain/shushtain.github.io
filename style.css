@@ -24,7 +24,7 @@
 	/* = colors = */
 	--color-bg: hsl(200, 10%, 10%);
 	--color-text: hsl(200, 10%, 100%);
-	--color-accent: hsl(200, 100%, 70%);
+	--color-accent: hsl(40, 75%, 70%);
 
 	/* = typography = */
 	--min-fs: calc(16 / 16);
