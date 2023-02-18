@@ -22,7 +22,7 @@
 	--max-cw: calc(1000 / 16);
 
 	/* = colors = */
-	--color-bg: hsl(200, 5%, 5%);
+	--color-bg: hsl(200, 5%, 6%);
 	--color-text: hsl(200, 5%, 100%);
 	--color-accent: hsl(200, 100%, 70%);
 
@@ -116,6 +116,7 @@ h1 {
 	font-weight: bold;
 	max-width: calc(var(--fs) * 35);
 	margin-bottom: calc(var(--s) * 2);
+	letter-spacing: calc(1 / 64 * 1rem);
 }
 
 h2 {
@@ -126,6 +127,7 @@ h2 {
 	max-width: calc(var(--fs) * 30);
 	margin-top: calc(var(--s) * 8);
 	margin-bottom: calc(var(--s) * 2);
+	letter-spacing: calc(1 / 48 * 1rem);
 }
 
 article h2 {
@@ -182,7 +184,7 @@ body {
 	margin: 0 auto;
 	padding: calc(var(--s) * 3);
 	font: var(--fs)/var(--lh) 'IBM Plex Sans', Helvetica, Arial, sans-serif;
-	letter-spacing: calc(1 / 64 * 1rem);
+	letter-spacing: calc(1 / 32 * 1rem);
 }
 
 header,
