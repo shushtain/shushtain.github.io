@@ -17,22 +17,21 @@
 
 	/* = canvas = */
 	--min-vw: calc(400 / 16);
-	--max-vw: calc(3840 / 16);
+	--max-vw: calc(1920 / 16);
 	--min-cw: calc(400 / 16);
 	--max-cw: calc(1000 / 16);
 
 	/* = colors = */
 	--color-bg: hsl(200, 5%, 6%);
 	--color-text: hsl(200, 5%, 100%);
-	--color-accent: hsl(200, 100%, 70%);
+	--color-accent: hsl(52, 100%, 50%);
 
 	/* = typography = */
 	--min-fs: calc(16 / 16);
-	--max-fs: calc(30 / 16);
-	--fs: var(--min-fs-rem);
+	--max-fs: calc(20 / 16);
+	--fs: clamp(var(--min-fs-rem), calc(var(--min-fs-rem) + (var(--max-fs) - var(--min-fs)) * (100vw - var(--min-vw-rem)) / (var(--max-vw) - var(--min-vw))), var(--max-fs-rem));
 	--fsr: 1.3;
-	--lh: 1.5;
-	--ll: calc(var(--fs) * 30);
+	--lh: 1.6;
 
 	/* = spacing = */
 	--s: calc(var(--fs) * var(--lh) / 2);
@@ -114,7 +113,7 @@ h1 {
 	line-height: 1.1;
 	word-wrap: break-word;
 	font-weight: bold;
-	max-width: calc(var(--fs) * 35);
+	max-width: calc(var(--fs) * 40);
 	margin-bottom: calc(var(--s) * 2);
 }
 
@@ -152,7 +151,7 @@ h4 {
 
 p,
 ul {
-	max-width: calc(var(--fs) * 30);
+	max-width: calc(var(--fs) * 32);
 	margin-top: calc(var(--s));
 	margin-bottom: calc(var(--s));
 }
@@ -181,7 +180,7 @@ body {
 	max-width: var(--max-vw-rem);
 	margin: 0 auto;
 	padding: calc(var(--s) * 3);
-	font: var(--fs)/var(--lh) 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+	font: var(--fs)/var(--lh) 'Inter', Helvetica, Arial, sans-serif;
 	letter-spacing: calc(1 / 64 * 1rem);
 }
 
@@ -200,41 +199,6 @@ footer {
 === CUSTOM ===
 */
 
-/*
-div {
-	pointer-events: none;
-}
-
-figure {
-	pointer-events: auto;
-}
-
-div,
-figure {
-	transition: .3s opacity, .3s filter;
-}
-
-div:hover figure {
-	opacity: .5;
-	filter: grayscale();
-}
-
-
-div figure:hover {
-	opacity: 1;
-	filter: grayscale(0);
-}*/
-
-/*
-=== MEDIA 400 ===
-*/
-
-@media (min-width:25em) {
-	:root {
-		--fs: calc(var(--min-fs-rem) + (var(--max-fs) - var(--min-fs)) * (100vw - var(--min-vw-rem)) / (var(--max-vw) - var(--min-vw)));
-		--cw: calc(var(--min-cw-rem) + (var(--max-cw) - var(--min-cw)) * (100vw - var(--min-vw-rem)) / (var(--max-vw) - var(--min-vw)));
-	}
-}
 
 
 /*
@@ -267,41 +231,7 @@ div figure:hover {
 	}
 }
 
-/*
-=== MEDIA 2000 ===
-*/
 
-@media (min-width:125em) {
-	:root {
-		--grid: 3;
-		/* --fsr: 1.6; */
-	}
-}
-
-/*
-=== MEDIA 3000 ===
-*/
-
-@media (min-width:187.5em) {
-	:root {
-		--grid: 4;
-		/* --fsr: 1.7; */
-	}
-}
-
-/*
-=== MEDIA 3840 ===
-*/
-
-@media (min-width:240em) {
-
-	:root {
-		/* --fsr: 1.8; */
-		--fs: var(--max-fs-rem);
-		--cw: var(--max-cw-rem);
-	}
-
-}
 
 @media print {
 
