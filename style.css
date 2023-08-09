@@ -22,16 +22,16 @@
 	--max-cw: calc(1000 / 16);
 
 	/* = colors = */
-	--color-bg: hsl(200, 5%, 6%);
+	--color-bg: hsl(200, 5%, 10%);
 	--color-text: hsl(200, 5%, 100%);
-	--color-accent: hsl(52, 100%, 50%);
+	--color-accent: hsl(50, 100%, 50%);
 
 	/* = typography = */
 	--min-fs: calc(16 / 16);
-	--max-fs: calc(20 / 16);
+	--max-fs: calc(22 / 16);
 	--fs: clamp(var(--min-fs-rem), calc(var(--min-fs-rem) + (var(--max-fs) - var(--min-fs)) * (100vw - var(--min-vw-rem)) / (var(--max-vw) - var(--min-vw))), var(--max-fs-rem));
-	--fsr: 1.3;
 	--lh: 1.6;
+	--fsr: 1.3;
 
 	/* = spacing = */
 	--s: calc(var(--fs) * var(--lh) / 2);
@@ -50,14 +50,16 @@
 === COMMON ===
 */
 
-strong {
+strong,
+h1,
+h2 {
 	font-weight: bold;
 }
 
 a {
+	color: var(--color-accent);
 	text-decoration: none;
 	font-weight: bold;
-	color: var(--color-accent);
 }
 
 a:hover {
@@ -73,7 +75,6 @@ video {
 }
 
 figure {
-	/* padding: calc(var(--s)) 0; */
 	max-width: var(--max-cw-rem);
 }
 
@@ -102,9 +103,7 @@ footer nav {
 */
 
 h1,
-h2,
-h3,
-h4 {
+h2 {
 	letter-spacing: unset;
 }
 
@@ -112,61 +111,59 @@ h1 {
 	font-size: calc(var(--fs) * var(--fsr) * var(--fsr) * var(--fsr));
 	line-height: 1.1;
 	word-wrap: break-word;
-	font-weight: bold;
 	max-width: calc(var(--fs) * 40);
 	margin-bottom: calc(var(--s) * 2);
+	letter-spacing: normal;
 }
 
 h2 {
 	font-size: calc(var(--fs) * var(--fsr) * var(--fsr));
 	line-height: 1.2;
 	word-wrap: break-word;
-	font-weight: bold;
 	max-width: calc(var(--fs) * 30);
 	margin-top: calc(var(--s) * 8);
 	margin-bottom: calc(var(--s) * 2);
+	/*	letter-spacing: normal;*/
 }
 
-article h2 {
-	margin-top: calc(var(--s) * 6);
+article h2,
+article div,
+article p + div,
+article div + p,
+article h2 + div,
+article div + h2 {
+	margin-top: calc(var(--s) * 8);
 }
 
-h3 {
-	font-size: calc(var(--fs) * var(--fsr));
-	margin-bottom: calc(var(--s) * 2);
-	line-height: 1.3;
-	font-weight: bold;
+p {
 	max-width: calc(var(--fs) * 30);
-	margin-top: calc(var(--s) * 2);
-	margin-bottom: calc(var(--s) * 1);
-}
-
-h4 {
-	line-height: 1.4;
-	font-weight: bold;
-	max-width: calc(var(--fs) * 30);
-	margin-top: calc(var(--s) * 1);
-	margin-bottom: calc(var(--s) * 1);
-}
-
-p,
-ul {
-	max-width: calc(var(--fs) * 32);
 	margin-top: calc(var(--s));
 	margin-bottom: calc(var(--s));
+}
+
+article p {
+	max-width: calc(var(--fs) * 32);
 }
 
 h2 + div,
 div + h2,
 p + div,
-div + p,
-ul + div,
-div + ul {
-	margin-top: calc(var(--s) * 3);
+div + p {
+	margin-top: calc(var(--s) * 4);
 }
 
 li {
 	margin-left: 2.5rem;
+}
+
+.file::before {
+	content: "📄";
+	margin-right: calc(var(--s) / 4);
+	display: inline-block;
+}
+
+.file ::before:hover {
+	/*	text-decoration: none;*/
 }
 
 
@@ -181,7 +178,7 @@ body {
 	margin: 0 auto;
 	padding: calc(var(--s) * 3);
 	font: var(--fs)/var(--lh) 'Inter', Helvetica, Arial, sans-serif;
-	letter-spacing: calc(1 / 64 * 1rem);
+	letter-spacing: calc(1 / 48 * 1rem);
 }
 
 header,
@@ -207,7 +204,7 @@ footer {
 
 @media (min-width:37.5em) {
 	:root {
-		--fsr: 1.4;
+		--fsr: 1.5;
 	}
 }
 
@@ -217,7 +214,7 @@ footer {
 
 @media (min-width:50em) {
 	:root {
-		--fsr: 1.5;
+		/*		--lh: 1.5;*/
 	}
 }
 
@@ -239,7 +236,6 @@ footer {
 
 		--color-bg: hsl(0, 0%, 100%);
 		--color-text: hsl(0, 0%, 0%);
-		--color-accent: hsl(0, 0%, 0%);
 
 		--fs: 12pt;
 
