@@ -22,9 +22,9 @@
 	--max-cw: calc(1000 / 16);
 
 	/* = colors = */
-	--color-bg: hsl(200, 0%, 10%);
-	--color-text: hsl(200, 5%, 100%);
-	--color-accent: hsl(50, 100%, 50%);
+	--color-bg: hsl(10, 0%, 10%);
+	--color-text: hsl(10, 0%, 90%);
+	--color-accent: hsl(10, 80%, 70%);
 
 	/* = typography = */
 	--min-fs: calc(16 / 16);
