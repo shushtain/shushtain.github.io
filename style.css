@@ -50,6 +50,7 @@
 
 	/* = content width = */
 	--max-cw: calc(var(--fs) * 30);
+	--max-lw: calc(var(--fs) * 30);
 
 	/* = -rem = */
 	--min-vw-rem: calc(var(--min-vw) * 1rem);
@@ -89,6 +90,14 @@ video {
 figure {
 	max-width: var(--max-cw);
 	padding: var(--s) 0;
+}
+
+p + figure {
+	margin-top: calc(var(--s) * 2);
+}
+
+figure + p {
+	margin-top: calc(var(--s) * 2);
 }
 
 /*
@@ -147,7 +156,7 @@ h4 {
 }
 
 p {
-	max-width: var(--max-cw);
+	max-width: var(--max-lw);
 	margin-top: calc(var(--s));
 	margin-bottom: calc(var(--s));
 }
