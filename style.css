@@ -271,7 +271,7 @@ footer nav {
 		--color-bg: hsl(0, 0%, 95%);
 		--color-spot: hsl(0, 0%, 90%);
 		--color-text: hsl(0, 0%, 5%);
-		--color-accent: hsl(240, 100%, 50%);
+		--color-accent: hsl(20, 80%, 40%);
 	}
 
 	body {
@@ -308,6 +308,10 @@ footer nav {
 		page-break-after: avoid;
 	}
 
+	h1,
+	h2,
+	h3,
+	h4,
 	img,
 	figure,
 	p,
