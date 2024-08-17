@@ -1,3 +1,7 @@
 User-agent: *
 Disallow: /apps/
 Disallow: /404.html
+Disallow: /.vscode/
+Disallow: /_res/
+Disallow: /_templates/
+Disallow: /_blocks/
