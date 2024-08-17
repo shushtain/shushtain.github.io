@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!-- en / uk -->
-<html lang="en
-">
+<html lang="en">
   <!-- head | title | description -->
   <head>
   <!-- GENERAL -->
@@ -21,31 +19,32 @@
 </head>
 
   <body>
-    <!-- header | other language | path -->
+    <!-- header -->
     <header>
   <nav aria-label="Main">
     <menu>
       <li>
-        <a href="/" class="button logo"><span>Artem Shush</span></a>
+        <a href="/" class="button logo" title="Home"><span>Artem Shush</span></a>
       </li>
       <li>
         <a href="/design/" class="button"><span>Design</span></a>
       </li>
       <li>
-        <a href="/human-rights/" class="button"><span>Human Rights</span></a>
+        <a href="/code/" class="button"><span>Code</span></a>
       </li>
       <li>
-        <a href="/code/" class="button"><span>Code</span></a>
+        <a href="/activism/" class="button"><span>Activism</span></a>
       </li>
       <li>
         <a href="/cv/" class="button"><span>CV</span></a>
       </li>
       <li>
-        <a href="https://bsky.app/profile/shushtain.bsky.social/" target="_blank"
-          class="button"><span>Bluesky</span></a>
+        <a href="https://bsky.app/profile/shushtain.bsky.social/" target="_blank" class="button" title="Bluesky"
+          aria-label="Bluesky">🦋</a>
       </li>
       <li>
-        <a href="https://mastodon.social/@shushtain" target="_blank" class="button"><span>Mastodon</span></a>
+        <a href="https://mastodon.social/@shushtain" target="_blank" class="button" title="Mastodon"
+          aria-label="Mastodon">🐘</a>
       </li>
     </menu>
   </nav>
@@ -54,20 +53,42 @@
     <!-- *** CONTENT *** -->
 
     <main>
-      <h1>ERROR 404. Sorry, the&nbsp;page is&nbsp;not&nbsp;found</h1>
-      <p>
-        But even when links don&rsquo;t work, I do.
-        <br />
-        <a href="mailto:shushtain@gmail.com" target="_blank">
-          shushtain@gmail.com
-        </a>
-      </p>
+      <section id="hero">
+        <h1>ERROR 404.<br />The&nbsp;page is&nbsp;not&nbsp;found</h1>
+        <p>
+          But even when links don't work, I do.
+        <div class="email-wrapper">
+          <a href="mailto:shushtain@gmail.com" target="_blank" class="button mail"><span
+              id="email">shushtain@gmail.com</span></a>
+          <button type="button" id="copy-email" title="Copy email" aria-label="Copy email">✂️</button>
+        </div>
+      </section>
     </main>
 
     <!-- *** END CONTENT *** -->
 
-    <!-- footer -->
-    <footer></footer>
+    <!-- footer | (no-back) | path -->
+    <header>
+    <nav aria-label="Bottom">
+        <menu class="">
+            <li><a href="/" class="button back"><span>Back</span></a></li>
+        </menu>
+        <menu>
+            <li>
+                <a href="mailto:shushtain@gmail.com" target="_blank"
+                    class="button mail"><span>shushtain@gmail.com</span></a>
+            </li>
+            <li>
+                <a href="https://bsky.app/profile/shushtain.bsky.social/" target="_blank"
+                    class="button"><span>Bluesky</span></a>
+            </li>
+            <li>
+                <a href="https://mastodon.social/@shushtain" target="_blank" class="button"><span>Mastodon</span></a>
+            </li>
+        </menu>
+    </nav>
+</header>
+
   </body>
 
 </html>

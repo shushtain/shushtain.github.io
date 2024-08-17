@@ -1,31 +1,33 @@
 <!DOCTYPE html>
-<!-- en / uk -->
-<html lang="{%}{$} en {%}">
+<html lang="en">
   <!-- head | title | description -->
   {%}{$} head {|} 404 NOT FOUND • Artem Shush {|} Error 404. The page is not
   found.{%}
 
   <body>
-    <!-- header | other language | path -->
-    {%}{$} header {|} ua {|} 404.html {%}
+    <!-- header -->
+    {%}{$} header {%}
 
     <!-- *** CONTENT *** -->
 
     <main>
-      <h1>ERROR 404. Sorry, the&nbsp;page is&nbsp;not&nbsp;found</h1>
-      <p>
-        But even when links don&rsquo;t work, I do.
-        <br />
-        <a href="mailto:shushtain@gmail.com" target="_blank">
-          shushtain@gmail.com
-        </a>
-      </p>
+      <section id="hero">
+        <h1>ERROR 404.<br />The&nbsp;page is&nbsp;not&nbsp;found</h1>
+        <p>
+          But even when links don't work, I do.
+        <div class="email-wrapper">
+          <a href="mailto:shushtain@gmail.com" target="_blank" class="button mail"><span
+              id="email">shushtain@gmail.com</span></a>
+          <button type="button" id="copy-email" title="Copy email" aria-label="Copy email">✂️</button>
+        </div>
+      </section>
     </main>
 
     <!-- *** END CONTENT *** -->
 
-    <!-- footer -->
-    {%}{$} footer {%}
+    <!-- footer | (no-back) | path -->
+    {%}{$} footer {|} {|} / {%}
+
   </body>
 
 </html>
