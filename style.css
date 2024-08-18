@@ -255,7 +255,6 @@ article>section {
     padding-bottom: 0;
 }
 
-
 /* *** NAVIGATION *** */
 
 nav {
@@ -355,7 +354,7 @@ button:disabled,
 .card-cover {
     width: 100%;
     object-fit: cover;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 16;
     border-radius: var(--s-08);
     display: flex;
     flex-flow: column nowrap;
@@ -367,6 +366,7 @@ button:disabled,
     border-radius: var(--s-08);
     display: flex;
     flex-flow: column nowrap;
+    gap: 0;
 }
 
 .card-text p {
@@ -460,8 +460,6 @@ button:disabled,
     content: "⏩";
     padding-left: var(--s-08);
     display: inline-block;
-    /* position: relative; */
-    /* bottom: .125rem; */
 }
 
 .skip:focus {
