@@ -82,6 +82,17 @@
     --fw-text: 400;
     --fw-display: 700;
 
+    /* bleed */
+    --bleed-min: calc(16 / 16);
+    --bleed-max: calc(48 / 16);
+
+    --bleed-min-rem: calc(var(--bleed-min) * 1rem);
+    --bleed-max-rem: calc(var(--bleed-max) * 1rem);
+
+    --bleed: clamp(var(--bleed-min-rem),
+            calc(var(--bleed-min-rem) + (var(--bleed-max) - var(--bleed-min)) * (100vw - var(--vw-min-rem)) / (var(--vw-max) - var(--vw-min))),
+            var(--bleed-max-rem));
+
     /* static spacing */
     --s-04: calc(4 / 16 * 1rem);
     --s-08: calc(8 / 16 * 1rem);
@@ -167,6 +178,7 @@ h2 {
 h3 {
     font-size: var(--fs-h3);
     line-height: var(--lh-h3);
+    word-wrap: break-word;
     padding-bottom: var(--d-08);
 }
 
@@ -205,7 +217,7 @@ mark {
 body {
     width: clamp(var(--vw-min-rem), 100%, var(--vw-max-rem));
     margin: 0 auto;
-    padding: var(--d-32);
+    padding: var(--bleed);
     background-color: var(--c-bg);
     color: var(--c-text);
     font: var(--fs-l)/var(--lh-l) "IBM Plex Mono", "Inter", "Helvetica", sans-serif;
@@ -320,8 +332,8 @@ button:disabled,
     display: flex;
     flex-flow: row wrap;
     gap: var(--d-24);
-    justify-content: stretch;
-    align-items: stretch;
+    /* justify-content: stretch; */
+    /* align-items: stretch; */
     width: 100%;
 }
 
