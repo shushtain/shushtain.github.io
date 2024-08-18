@@ -220,7 +220,7 @@ body {
     padding: var(--bleed);
     background-color: var(--c-bg);
     color: var(--c-text);
-    font: var(--fs-l)/var(--lh-l) "IBM Plex Mono", "Inter", "Helvetica", sans-serif;
+    font: var(--fs-l)/var(--lh-l) "IBM Plex Mono", "Inter", Helvetica, sans-serif;
     letter-spacing: var(--ls);
     font-weight: var(--fw-text);
     display: flex;
@@ -332,8 +332,6 @@ button:disabled,
     display: flex;
     flex-flow: row wrap;
     gap: var(--d-24);
-    /* justify-content: stretch; */
-    /* align-items: stretch; */
     width: 100%;
 }
 
@@ -355,9 +353,8 @@ button:disabled,
 }
 
 .card-cover {
-    background-image: url("cover.png");
-    background-size: cover;
     width: 100%;
+    object-fit: cover;
     aspect-ratio: 16 / 9;
     border-radius: var(--s-08);
     display: flex;
