@@ -448,11 +448,33 @@ button:disabled,
     content: "➡️";
     padding-left: var(--s-08);
     display: inline-block;
+}
+
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip span::after {
+    content: "⏩";
+    padding-left: var(--s-08);
+    display: inline-block;
     /* position: relative; */
     /* bottom: .125rem; */
 }
 
-.more span {
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+.more span,
+.skip span {
     padding-right: 0;
 }
 
