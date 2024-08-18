@@ -168,6 +168,7 @@ video {
     width: 100%;
     display: block;
     user-select: none;
+    border-radius: var(--s-08);
 }
 
 figure {
@@ -176,7 +177,6 @@ figure {
     display: flex;
     flex-flow: column nowrap;
     gap: var(--d-08);
-    padding: var(--d-16) 0;
 }
 
 figcaption {
@@ -251,6 +251,10 @@ mark {
     border-radius: var(--s-04);
 }
 
+small {
+    font-size: var(--fs-l);
+}
+
 /* *** STRUCTURE *** */
 
 body {
@@ -267,10 +271,14 @@ body {
     gap: var(--d-80);
 }
 
-main {
+main,
+article {
     display: flex;
     flex-flow: column nowrap;
     gap: var(--d-128);
+}
+
+main {
     padding-bottom: var(--d-48);
 }
 
@@ -446,6 +454,16 @@ button:disabled,
 .card a:active,
 .card a.disabled {
     text-decoration: none;
+}
+
+/* *** GALLERY *** */
+
+.gallery {
+    padding: var(--d-24) 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--d-24);
+    width: 100%;
 }
 
 /* *** SPECIAL *** */

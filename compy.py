@@ -1,6 +1,10 @@
 paths = [
     "index.html",
     "404.html",
+    "design/index.html",
+    "design/kharkivpride/index.html",
+    "design/logofolio/index.html",
+    "design/refusion/index.html",
 ]
 
 for path in paths:
