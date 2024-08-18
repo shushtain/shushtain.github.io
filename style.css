@@ -126,18 +126,37 @@
 
 /* *** COMMON *** */
 
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 a,
 a:hover,
 a:visited {
-    color: var(--c-text-sub)
+    color: var(--c-text-sub);
+}
+
+p a {
+    text-decoration: underline solid var(--c-text-sub) 1px;
+    display: inline-block;
+    padding: 0 var(--s-04);
+    margin: 0 calc(var(--s-04) * -1);
+    border-radius: var(--s-04);
+    cursor: pointer;
+}
+
+p a:hover {
+    background-color: var(--c-area-hovered);
+}
+
+p a:active {
+    background-color: var(--c-area-pressed);
+}
+
+p a.disabled {
+    text-decoration: none;
+    cursor: default;
+    pointer-events: none;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
 }
 
 hr {
@@ -149,6 +168,22 @@ video {
     width: 100%;
     display: block;
     user-select: none;
+}
+
+figure {
+    width: 100%;
+    max-width: calc(var(--fs-l) * 45);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--d-08);
+    padding: var(--d-16) 0;
+}
+
+figcaption {
+    font-size: var(--fs-l);
+    line-height: var(--lh-l);
+    width: 90%;
+    max-width: calc(var(--fs-l) * 40);
 }
 
 /* *** TYPOGRAPHY *** */
@@ -209,7 +244,11 @@ em {
 
 mark {
     background-color: var(--c-area);
-    color: var(--c-text-sub);
+    color: var(--c-text);
+    display: inline-block;
+    padding: 0 var(--s-08);
+    margin: 0 calc(var(--s-08) * -1);
+    border-radius: var(--s-04);
 }
 
 /* *** STRUCTURE *** */
