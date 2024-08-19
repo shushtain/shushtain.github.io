@@ -231,7 +231,7 @@ p {
 h3,
 h4,
 p {
-    max-width: calc(var(--fs-p) * 30);
+    max-width: calc(var(--fs-p) * 35);
 }
 
 strong {
