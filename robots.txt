@@ -1,6 +1,6 @@
 User-agent: *
 Disallow: /404.html
 Disallow: /.vscode/
-Disallow: /_fonts/
+Disallow: /fonts/
 Disallow: /_templates/
 Disallow: /_blocks/
