@@ -269,6 +269,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     gap: var(--d-80);
+    text-wrap: balance;
 }
 
 main,
