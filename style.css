@@ -263,7 +263,7 @@ body {
     padding: var(--bleed);
     background-color: var(--c-bg);
     color: var(--c-text);
-    font: var(--fs-l)/var(--lh-l) IBMPlexMono, "IBM Plex Mono", "Courier New", monospace;
+    font: var(--fs-l)/var(--lh-l) "IBM Plex Mono", "IBM Plex Sans", "Inter", "Helvetica", sans-serif;
     letter-spacing: var(--ls);
     font-weight: var(--fw-text);
     display: flex;
