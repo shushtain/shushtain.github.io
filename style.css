@@ -477,8 +477,6 @@ button:disabled,
     content: "✉️";
     padding-right: var(--s-08);
     display: inline-block;
-    position: relative;
-    bottom: .125rem;
 }
 
 .file span::before {
