@@ -525,11 +525,12 @@ button:disabled,
   display: inline-block;
 }
 
+/* 
 .file span,
 .mail span,
 .back span {
   padding-left: 0;
-}
+} */
 
 .more span::after {
   content: "➡️";
@@ -558,10 +559,10 @@ button:disabled,
   height: auto;
 }
 
-.more span,
+/* .more span,
 .skip span {
   padding-right: 0;
-}
+} */
 
 .email-wrapper {
   padding-top: var(--d-08);
