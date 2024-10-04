@@ -288,6 +288,12 @@ small {
   font-weight: var(--fw-label);
 }
 
+main ul,
+main ol {
+  font-size: var(--fs-p);
+  line-height: var(--lh-p);
+}
+
 /* *** STRUCTURE *** */
 
 body {
@@ -574,6 +580,50 @@ button:disabled,
 .no-back,
 #copy-email {
   display: none;
+}
+
+/* *** CV *** */
+
+.cv {
+  gap: var(--d-96);
+}
+
+.cv #cv-experience h3,
+.cv #cv-volunteering h3 {
+  padding-bottom: 0;
+}
+
+.cv section section {
+  padding-top: var(--d-08);
+}
+
+.cv .subtext {
+  color: var(--c-text-sub);
+  font-size: var(--fs-l);
+}
+
+.cv p + ul {
+  margin-top: var(--d-08);
+}
+
+.cv section section ul {
+  font-size: var(--fs-l);
+  line-height: var(--lh-l);
+}
+
+/* .cv #cv-skills ul {
+  font-size: var(--fs-p);
+  line-height: var(--lh-p);
+} */
+
+.cv li {
+  list-style-type: none;
+}
+
+.cv li::before {
+  content: "·";
+  color: var(--c-text-sub);
+  padding-right: var(--s-04);
 }
 
 /* *** MEDIA THEME *** */

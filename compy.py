@@ -5,12 +5,13 @@ paths = [
     "design/kharkivpride/index.html",
     "design/logofolio/index.html",
     "design/refusion/index.html",
+    "cv/index.html",
 ]
 
 for path in paths:
 
     # read template
-    t = open(f"_templates/{path}")
+    t = open(f"_templates/{path}", encoding="utf8")
     template = t.read()
     t.close()
 
@@ -35,7 +36,7 @@ for path in paths:
                 vars[x] = vars[x].strip()
 
             # read block for the part
-            b = open(f"_blocks/{vars[0]}.html")
+            b = open(f"_blocks/{vars[0]}.html", encoding="utf8")
             parts[i] = b.read()
             b.close()
 
@@ -65,7 +66,7 @@ for path in paths:
         # combine parts into template
         template += parts[i]
 
-    t = open(path, "w")
+    t = open(path, "w", encoding="utf8")
     t.write(template)
     t.close()
 
